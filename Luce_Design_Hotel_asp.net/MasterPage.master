@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="css/sifirlama.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		    $(function () {
+		        $('#menu ul').hide();
+		        $('#menu > li').hover(
+				function () {
+				    $(this).find('ul').show();
+				},
+				function () {
+				    $(this).find('ul').hide();
+				}
+				);
+		    });
+		</script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!--Üst kapsayıcı başlangıç-->
+        <asp:ContentPlaceHolder id="top_menu1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <img alt=" " src="img/logo.png"/>
+		<!--Menubar başlangıç--->
+		<div id="menubar">
+			<ul id="menu">
+				<li><a href="anasayfa.html">Anasayfa</a></li>
+				<li><a href="hakkimizda.aspx">Hakkımızda</a>
+					<ul style="display: none;">
+						<li><a href="odalar.aspx">Odalar</a></li>
+					</ul>
+				</li>
+				<li><a href="resimler.aspx">Resimler</a></li>
+				<li><a href="rezarvasyon-giris.aspx">Rezervasyon</a></li>
+				<li><a href="iletisim.aspx">İletişim</a></li>
+			</ul>
+		</div>
+		<!--Menubar bitişi-->
+        <asp:ContentPlaceHolder id="top_menu2" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <!--Üst kapsayıcı bitiş-->
+        <asp:ContentPlaceHolder id="icerik" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <!--Footer menü başlangıç-->
+	<div id="footer-kapsa">
+		<ul>
+			<li><a href="https://www.facebook.com/lucealacati/"><img alt="facebook" src="img/facebook.png"/></a></li>
+			<li><a href="https://www.instagram.com/lucehotelalacati/"><img alt="instagram" src="img/instagram.png"/></a></li>
+		</ul>
+		<div id="adres">
+			<p>Luce Alacati</p>
+			<p>(0232) 716 64 41</p>
+			<p>İnönü Caddesi Yenimecidiye Mah. No:49 </p>
+			<p>Alaçatı-Çeşme/İzmir</p>
+		</div>
+	</div>
+	<!--Footer menü bitiş-->
+    </form>
+</body>
+</html>

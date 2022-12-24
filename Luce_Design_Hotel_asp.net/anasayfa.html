@@ -1,0 +1,52 @@
+<html>
+<head>
+		<title>Luce Design Hotel</title>
+		<link rel="stylesheet" type="text/css" href="css/sifirlama.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />		
+		<script>
+			$(document).ready(function(){
+				$("").click(function(){
+					
+				});
+			});
+		</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#menu ul').hide();
+				$('#menu > li').hover(
+				function() {
+				$(this).find('ul').show();
+				},
+				function() {
+				$(this).find('ul').hide();
+				}
+				);
+			});
+		</script>
+</head>
+<body>
+	<!--Üst kapsayýcý baþlangýç-->
+	<div id="ust-kapsayici" 
+        style="background-image: url('img/luce2.jpg'); background-repeat: no-repeat; background-attachment: scroll; background-position: center center; overflow: auto; width: 100%; height: 100%;">
+		<img src="img/logo.png"/>
+		<!--Menubar baþlangýç--->
+		<div id="menubar">
+			<ul id="menu">
+				<li><a href="anasayfa.html">Anasayfa</a></li>
+				<li><a href="hakkimizda.aspx">Hakkýmýzda</a>
+					<ul style="display: none;">
+						<li><a href="odalar.aspx">Odalar</a></li>
+					</ul>
+				</li>
+				<li><a href="resimler.aspx">Resimler</a></li>
+				<li><a href="rezarvasyon-giris.aspx">Rezervasyon</a></li>
+				<li><a href="iletisim.aspx">Ýletiþim</a></li>
+			</ul>
+		</div>
+		<!--Menubar bitiþi-->
+		<h3>Tatil hazýnýn doruðunda...</h3>
+	</div>
+	<!--Üst kapsayýcý bitiþi-->
+</body>
+</html>
